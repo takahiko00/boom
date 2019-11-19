@@ -1,0 +1,34 @@
+* {
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+.sign_up_main__center {
+  width: 450px;
+  margin: 100px auto;
+}
+.sign_up_main__center__title {
+  font-size: 50px;
+  font-family: "Caveat", cursive;
+  text-align: center;
+}
+.sign_up_field {
+  margin: 20px 0px 0px 0px;
+}
+.sign_up_field__name {
+  width: 440px;
+  height: 50px;
+  padding: 0 0 0 10px;
+  font-size: 20px;
+  border: solid 0px;
+  border-bottom: 1px solid #e2e0e0;
+}
+.sign_up_btn {
+  padding: 100px 0 0 0;
+  height: 100px;
+}
+.sign_up_btn__text {
+  width: 100px;
+  height: 50px;
+  margin: 0 0 0 170px;
+}
