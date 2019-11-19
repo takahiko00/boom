@@ -1,0 +1,17 @@
+.sign_up_main
+  .sign_up_main__center
+    .sign_up_main__center__title
+      BOOM
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .sign_up_field
+        = f.text_field :name, class: "sign_up_field__name", :placeholder => "Name"
+      .sign_up_field
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "sign_up_field__name", :placeholder => "Email"
+      .sign_up_field
+        = f.password_field :password, autocomplete: "new-password", class: "sign_up_field__name", :placeholder => "Password(６文字以上)"
+      .sign_up_field
+        = f.password_field :password_confirmation, autocomplete: "new-password", class: "sign_up_field__name", :placeholder => "Password確認"
+      .sign_up_btn
+        = f.submit "Sign up", class: "sign_up_btn__text"
+      -# = render "devise/shared/links"

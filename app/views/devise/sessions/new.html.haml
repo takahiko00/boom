@@ -1,0 +1,15 @@
+.sign_up_main
+  .sign_up_main__center
+    .sign_up_main__center__title
+      BOOM
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .sign_up_field
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "sign_up_field__name", :placeholder => "Email"
+      .sign_up_field
+        = f.password_field :password, autocomplete: "current-password", class: "sign_up_field__name", :placeholder => "Password"
+      - if devise_mapping.rememberable?
+        .sign_up_field
+          = f.check_box :remember_me
+          = f.label :remember_me
+      .sign_up_btn
+        = f.submit "Log in", class: "sign_up_btn__text"
