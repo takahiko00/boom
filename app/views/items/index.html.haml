@@ -1,0 +1,32 @@
+.item-main
+  .item-header
+    .item-header__boom
+      BOOM
+    -if user_signed_in?
+      .item-header__menu
+        .item-header__menu__bar
+          %i.fas.fa-home
+          HOME
+        .item-header__menu__bar
+          %i.fas.fa-heart
+          FAVORITE
+        .item-header__menu__bar
+          %i.fas.fa-paper-plane
+          POST
+        .item-header__menu__bar
+          %i.fas.fa-caret-square-down
+          CATEGORY
+      .item-header__search
+        あああああああああああああああああああ
+      .item-header__sgin-btn
+        .item-header__sgin-btn__log-out
+          =link_to "ログアウト", destroy_user_session_path, method: :delete, class: "item-header__sgin-btn__log-out__text"
+    -else
+      .item-header__sgin-btn__log-out
+        =link_to "ログイン", new_user_session_path, method: :get, class: "game-main__side__footer__sign__up__text"
+      .item-header__sgin-btn__log-out
+        =link_to "新規登録", new_user_registration_path, method: :get, class: "game-main__side__footer__sign__up__text"
+
+
+
+
